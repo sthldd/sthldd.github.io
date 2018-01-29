@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="####在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别 #####相同点: ######1、都是用来改变函数的this对象的指向的。 ######2、第一个参数都是this要指向的对象。 ######3、都可以利用后续参数传参 #####不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;qu">
+<meta name="description" content="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别相同点:1、都是用来改变函数的this对象的指向的。2、第一个参数都是this要指向的对象。3、都可以利用后续参数传参不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;quot;,  age: &amp;quot;10&amp;quot;,  form: &amp;qu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="call、apply、bind 的用法分别是什么">
 <meta property="og:url" content="http://yoursite.com/2018/01/29/call、apply、bind 的用法分别是什么/index.html">
 <meta property="og:site_name" content="身体坏了">
-<meta property="og:description" content="####在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别 #####相同点: ######1、都是用来改变函数的this对象的指向的。 ######2、第一个参数都是this要指向的对象。 ######3、都可以利用后续参数传参 #####不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;qu">
-<meta property="og:updated_time" content="2018-01-29T07:56:15.316Z">
+<meta property="og:description" content="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别相同点:1、都是用来改变函数的this对象的指向的。2、第一个参数都是this要指向的对象。3、都可以利用后续参数传参不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;quot;,  age: &amp;quot;10&amp;quot;,  form: &amp;qu">
+<meta property="og:updated_time" content="2018-01-29T08:02:35.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="call、apply、bind 的用法分别是什么">
-<meta name="twitter:description" content="####在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别 #####相同点: ######1、都是用来改变函数的this对象的指向的。 ######2、第一个参数都是this要指向的对象。 ######3、都可以利用后续参数传参 #####不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;qu">
+<meta name="twitter:description" content="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别相同点:1、都是用来改变函数的this对象的指向的。2、第一个参数都是this要指向的对象。3、都可以利用后续参数传参不同点，来看个例子12345678910111213141516var 盖伦 = &amp;#123;  name: &amp;quot;德玛&amp;quot;,  age: &amp;quot;10&amp;quot;,  form: &amp;qu">
 
 
 
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-29T15:52:50+08:00">
                 2018-01-29
@@ -298,12 +298,7 @@
       
 
       
-        <p>####在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别</p>
-<p>#####相同点:</p>
-<p>######1、都是用来改变函数的this对象的指向的。</p>
-<p>######2、第一个参数都是this要指向的对象。</p>
-<p>######3、都可以利用后续参数传参</p>
-<p>#####不同点，来看个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var 盖伦 = &#123;</span><br><span class="line">  name: &quot;德玛&quot;,</span><br><span class="line">  age: &quot;10&quot;,</span><br><span class="line">  form: &quot;德玛西亚&quot;,</span><br><span class="line">  say: function() &#123;</span><br><span class="line">    alert(this.name + &quot; , &quot; + this.age + &quot; ,来自&quot; + this.form);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var 卡特 = &#123;</span><br><span class="line">  name: &quot;不祥之刃&quot;,</span><br><span class="line">  age: 18,</span><br><span class="line">  form: &quot;诺克萨斯&quot;</span><br><span class="line">&#125;</span><br><span class="line">盖伦.say(); //德玛 , 10 ,来自德玛西亚</span><br></pre></td></tr></table></figure></p>
+        <h4 id="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别"><a href="#在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别" class="headerlink" title="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别"></a>在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别</h4><h5 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h5><h6 id="1、都是用来改变函数的this对象的指向的。"><a href="#1、都是用来改变函数的this对象的指向的。" class="headerlink" title="1、都是用来改变函数的this对象的指向的。"></a>1、都是用来改变函数的this对象的指向的。</h6><h6 id="2、第一个参数都是this要指向的对象。"><a href="#2、第一个参数都是this要指向的对象。" class="headerlink" title="2、第一个参数都是this要指向的对象。"></a>2、第一个参数都是this要指向的对象。</h6><h6 id="3、都可以利用后续参数传参"><a href="#3、都可以利用后续参数传参" class="headerlink" title="3、都可以利用后续参数传参"></a>3、都可以利用后续参数传参</h6><h5 id="不同点，来看个例子"><a href="#不同点，来看个例子" class="headerlink" title="不同点，来看个例子"></a>不同点，来看个例子</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var 盖伦 = &#123;</span><br><span class="line">  name: &quot;德玛&quot;,</span><br><span class="line">  age: &quot;10&quot;,</span><br><span class="line">  form: &quot;德玛西亚&quot;,</span><br><span class="line">  say: function() &#123;</span><br><span class="line">    alert(this.name + &quot; , &quot; + this.age + &quot; ,来自&quot; + this.form);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var 卡特 = &#123;</span><br><span class="line">  name: &quot;不祥之刃&quot;,</span><br><span class="line">  age: 18,</span><br><span class="line">  form: &quot;诺克萨斯&quot;</span><br><span class="line">&#125;</span><br><span class="line">盖伦.say(); //德玛 , 10 ,来自德玛西亚</span><br></pre></td></tr></table></figure>
 <p>但是如果我们用盖伦的say方法来显示卡特的数据呢，我们可以用<strong>call</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.call(卡特); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
 <p>用<strong>apply</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.apply(卡特); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
 <p>用<strong>bind</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.bind(卡特)(); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
@@ -396,8 +391,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -413,7 +417,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -442,6 +446,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别"><span class="nav-number">1.</span> <span class="nav-text">在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#相同点"><span class="nav-number">1.1.</span> <span class="nav-text">相同点:</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1、都是用来改变函数的this对象的指向的。"><span class="nav-number">1.1.1.</span> <span class="nav-text">1、都是用来改变函数的this对象的指向的。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2、第一个参数都是this要指向的对象。"><span class="nav-number">1.1.2.</span> <span class="nav-text">2、第一个参数都是this要指向的对象。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3、都可以利用后续参数传参"><span class="nav-number">1.1.3.</span> <span class="nav-text">3、都可以利用后续参数传参</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不同点，来看个例子"><span class="nav-number">1.2.</span> <span class="nav-text">不同点，来看个例子</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -465,7 +485,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

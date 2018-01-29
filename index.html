@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-29T15:52:50+08:00">
                 2018-01-29
@@ -299,12 +299,7 @@
       
         
           
-            <p>####在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别</p>
-<p>#####相同点:</p>
-<p>######1、都是用来改变函数的this对象的指向的。</p>
-<p>######2、第一个参数都是this要指向的对象。</p>
-<p>######3、都可以利用后续参数传参</p>
-<p>#####不同点，来看个例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var 盖伦 = &#123;</span><br><span class="line">  name: &quot;德玛&quot;,</span><br><span class="line">  age: &quot;10&quot;,</span><br><span class="line">  form: &quot;德玛西亚&quot;,</span><br><span class="line">  say: function() &#123;</span><br><span class="line">    alert(this.name + &quot; , &quot; + this.age + &quot; ,来自&quot; + this.form);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var 卡特 = &#123;</span><br><span class="line">  name: &quot;不祥之刃&quot;,</span><br><span class="line">  age: 18,</span><br><span class="line">  form: &quot;诺克萨斯&quot;</span><br><span class="line">&#125;</span><br><span class="line">盖伦.say(); //德玛 , 10 ,来自德玛西亚</span><br></pre></td></tr></table></figure></p>
+            <h4 id="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别"><a href="#在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别" class="headerlink" title="在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别"></a>在JS中，这三者都是用来改变函数的this对象的指向的，我们来看看他们的区别</h4><h5 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h5><h6 id="1、都是用来改变函数的this对象的指向的。"><a href="#1、都是用来改变函数的this对象的指向的。" class="headerlink" title="1、都是用来改变函数的this对象的指向的。"></a>1、都是用来改变函数的this对象的指向的。</h6><h6 id="2、第一个参数都是this要指向的对象。"><a href="#2、第一个参数都是this要指向的对象。" class="headerlink" title="2、第一个参数都是this要指向的对象。"></a>2、第一个参数都是this要指向的对象。</h6><h6 id="3、都可以利用后续参数传参"><a href="#3、都可以利用后续参数传参" class="headerlink" title="3、都可以利用后续参数传参"></a>3、都可以利用后续参数传参</h6><h5 id="不同点，来看个例子"><a href="#不同点，来看个例子" class="headerlink" title="不同点，来看个例子"></a>不同点，来看个例子</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var 盖伦 = &#123;</span><br><span class="line">  name: &quot;德玛&quot;,</span><br><span class="line">  age: &quot;10&quot;,</span><br><span class="line">  form: &quot;德玛西亚&quot;,</span><br><span class="line">  say: function() &#123;</span><br><span class="line">    alert(this.name + &quot; , &quot; + this.age + &quot; ,来自&quot; + this.form);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var 卡特 = &#123;</span><br><span class="line">  name: &quot;不祥之刃&quot;,</span><br><span class="line">  age: 18,</span><br><span class="line">  form: &quot;诺克萨斯&quot;</span><br><span class="line">&#125;</span><br><span class="line">盖伦.say(); //德玛 , 10 ,来自德玛西亚</span><br></pre></td></tr></table></figure>
 <p>但是如果我们用盖伦的say方法来显示卡特的数据呢，我们可以用<strong>call</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.call(卡特); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
 <p>用<strong>apply</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.apply(卡特); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
 <p>用<strong>bind</strong>这样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">盖伦.say.bind(卡特)(); //不祥之刃 , 18 ,来自诺克萨斯</span><br></pre></td></tr></table></figure></p>
@@ -390,7 +385,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-25T13:30:35+08:00">
                 2017-12-25
@@ -523,7 +518,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -575,7 +570,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
